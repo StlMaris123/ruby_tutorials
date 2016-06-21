@@ -15,5 +15,15 @@ def marry_girl(color, figure = 8, education = "degree")
 end
 marry_girl("brown")
 marry_girl("dark", 1, "certificate")
-marry_girl
+marry_girl("chocolate", 9)
+
+def age_gap(husband, wife)
+  diff = husband - wife
+end
+
+ normal_gap = age_gap(50,45)
+ puts "their diff of #{normal_gap} is okay"
+
+ abnormal_gap = age_gap(80, 20)
+ puts "that diff of #{abnormal_gap} is totaally crazy!"
 
