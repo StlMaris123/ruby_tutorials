@@ -9,3 +9,11 @@ end
 
 girl_child
 boy_child("tall")
+
+def marry_girl(color, figure = 8, education = "degree")
+  puts "#{color},with #{education} and is size #{figure} is the right one!"
+end
+marry_girl("brown")
+marry_girl("dark", 1, "certificate")
+marry_girl
+
