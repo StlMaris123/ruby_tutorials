@@ -2,7 +2,7 @@
 puts "Welcome to this game!"
 
 #welcoming the user
-print "please wnter your name:"
+print "please enter your name:"
 input = gets
 name = input.chomp
 puts "welcome, #{name}!"
@@ -22,6 +22,8 @@ guessed_it = false
 until guess_no == 10 || guessed_it
 
 puts "you have #{10 - guess_no} guesses left"
+asterisk = "*" * (10 - guess_no)
+puts asterisk
 print "Make a guess:"
 guess = gets.to_i
 guess_no += 1
