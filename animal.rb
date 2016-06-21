@@ -10,13 +10,7 @@ class Bird
 end
 
 class Dog
-  def name=(new_value)
-    @name = new_value
-  end
-
-  def name
-    @name
-  end
+  attr_accessor :name, :age
 
   def talk
     puts "#{@name} barks"
@@ -24,14 +18,6 @@ class Dog
 
   def move(destination)
     puts "walking to #{destination}"
-  end
-
-  def age=(new_value)
-    @age = new_value
-  end
-
-  def age
-    @age
   end
 
   def report_age
