@@ -18,10 +18,14 @@ marry_girl("dark", 1, "certificate")
 marry_girl("chocolate", 9)
 
 def age_gap(husband, wife)
-  diff = husband - wife
+  if wife == 0
+    return 0.0
+  else
+      diff = husband / wife
+end
 end
 
- normal_gap = age_gap(50,45)
+ normal_gap = age_gap(50,0)
  puts "their diff of #{normal_gap} is okay"
 
  abnormal_gap = age_gap(80, 20)
