@@ -10,8 +10,12 @@ class Bird
 end
 
 class Dog
-  def make_up_name
-    @name = "Bella"
+  def name=(new_value)
+    @name = new_value
+  end
+
+  def name
+    @name
   end
 
   def talk
@@ -22,8 +26,12 @@ class Dog
     puts "walking to #{destination}"
   end
 
-  def make_up_age
-    @age = 10
+  def age=(new_value)
+    @age = new_value
+  end
+
+  def age
+    @age
   end
 
   def report_age
@@ -32,11 +40,14 @@ class Dog
 end
 #creating instances of the class
 bird = Bird.new
-dog  = Dog.new
+fido  = Dog.new
+fido.name = "Fido"
+fido.age = 8
+bella= Dog.new
+bella.name = "Bella"
+bella.age = 3
 
 #calling methods on the instances
 bird.move("trees")
-dog.make_up_name
-dog.talk
-dog.make_up_age
-dog.report_age
+fido.report_age
+bella.report_age
