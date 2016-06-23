@@ -11,7 +11,7 @@ end
 
 class Dog
   attr_accessor :name, :age
-    def name=(value)
+  def name=(value)
     if value == ""
       raise "name cant be blank"
     end
@@ -38,7 +38,7 @@ class Dog
   end
 end
 #creating instances of the class
-bird = Bird.new
+bird=Bird.new
 fido  = Dog.new
 fido.name = "Fido"
 fido.age = 8
