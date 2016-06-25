@@ -71,7 +71,7 @@ class HourlyEmployee < Employee
   attr_reader :salary
   def hourly_wage=(hourly_wage)
     if hourly_wage < 0
-      raise "hourly_wage of #{hourly_ wage} is not valid"
+      raise "hourly_wage of #{hourly_wage} is not valid"
     end
     @hourly_wage = hourly_wage
   end
@@ -95,7 +95,7 @@ class HourlyEmployee < Employee
 
   def salary_output
     print_name
-    pay_for_period = hourly_wage * hours_per_week
+    pay_for_period = hourly_wage * hours_per_week * 2
     formatted_pay = format("$%.2f", pay_for_period)
     puts "pay for this period is: #{formatted_pay}"
   end
