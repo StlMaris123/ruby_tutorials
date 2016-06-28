@@ -4,6 +4,7 @@ def find_adjective(string)
   #find the index of the word "is"
   index = words.find_index("is")
   #return the word following"is"
+  words[index + 1]
 end
 
 #create the variable inside the block
