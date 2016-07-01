@@ -19,7 +19,7 @@ class Oven
     "golden-brown #{contents}"
   end
 end
-diner = ['chips', 'sausages', 'chicken']
+diner = ['chips', nil, 'chicken']
 oven = Oven.new
 oven.turn_on
 diner.each do |item|
