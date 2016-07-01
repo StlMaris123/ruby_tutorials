@@ -26,16 +26,16 @@ class Oven
 end
 diner = ['chips', nil, 'chicken']
 oven = Oven.new
-oven.turn_off
-diner.each do |item|
+# oven.turn_off
+# diner.each do |item|
   begin
-    oven.contents = item
+    oven.turn_on
+    oven.contents = nil
     puts "serving #{oven.bake}"
   rescue OvenEmptyError => error
     puts "error: #{error.message}"
-  rescue OvenOffError => error
-    oven.turn_on
-    retry
-  end
+  ensure
+    oven.turn_off
+  
 end
 
