@@ -19,15 +19,15 @@ class Oven
     "golden-brown #{contents}"
   end
 end
-diner = ['chips', nil, 'chicken']
+diner = ['chips', "beef", 'chicken']
 oven = Oven.new
-oven.turn_on
+oven.turn_off
 diner.each do |item|
   begin
     oven.contents = item
     puts "serving #{oven.bake}"
   rescue => error
     puts "error: #{error.message}"
-    end
   end
+end
 
