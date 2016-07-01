@@ -35,6 +35,7 @@ diner.each do |item|
     puts "error: #{error.message}"
   rescue OvenOffError => error
     oven.turn_on
+    retry
   end
 end
 
