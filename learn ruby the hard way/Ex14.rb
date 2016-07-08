@@ -1,5 +1,5 @@
 user_name = ARGV.first #gets the first argument
-prompt = '>'
+prompt = '='
 
 puts "Hi #{user_name}?"
 puts "i'd like to ask you a few questions."
