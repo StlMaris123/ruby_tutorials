@@ -9,8 +9,12 @@ get ('/movies') do
   @movie[1].title = "Alien"
   @movie[2] = Movie.new
   @movie[2].title = "Terminator 2"
-    erb :index
+  erb :index
 end
-    get ('/movies/new') do
-      erb :new
+get ('/movies/new') do
+  erb :new
+end
+
+post('/movies/create') do
+  "Recieved: #{params.inspect}"
 end
