@@ -3,9 +3,10 @@ fruits    = ['apples', 'oranges', 'pears', 'apicarots']
 change   = [1, 'pennies', 2, 'dimes', 3, 'quarters']
 
 #traditional style of for_loop
-for number in the_count
-  puts "this is  count #{number}"
-end
+# for number in the_count
+#   puts "this is  count #{number}"
+# end
+the_count.each { |number| puts "this is count #{number}" }
 
 
 fruits.each do |fruit|
@@ -19,7 +20,7 @@ change.each { |i| puts "I got #{i}" }
 elements = []
 
 #Range operator to do 0 to 5 counts
-(0..5).each do |i|
+(0...5).each do |i|
   puts "adding #{i} to the list"
   elements.push(i)
 end
