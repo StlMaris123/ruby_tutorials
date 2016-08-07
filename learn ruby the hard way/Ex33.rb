@@ -1,7 +1,7 @@
 i = 0
 numbers = []
 
-while i < 6
+(0..6).each do
   puts "At the top, i is #{i}"
   numbers.push(i)
 
