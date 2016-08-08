@@ -5,7 +5,7 @@ end
 
 # is_a member of  Animal
 class Dog < Animal
-  def initiliaze(name)
+  def initialize(name)
     #has _a name
     @name = name
   end
@@ -13,7 +13,7 @@ end
 
 #is_a
 class Cat < Animal
-  def initiliaze
+  def initialize(name)
     #has_a name
     @name = name
   end

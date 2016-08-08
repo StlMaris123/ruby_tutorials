@@ -6,9 +6,20 @@ end
 class Engine
 
   def initialize(scene_map)
+	@scene_map = scene_map
   end
 
   def play()
+	current_scene = @scene_map.opening_scene()
+	last_scene = @scene_map.next_scene('finish')
+	while current_scene != last_scene
+	  next_scene_name = current_scene.enter()
+	  current_scene = @scene_map.next_scene(next_scene_name)
+	end
+
+	#be sure to ptint out the last scene
+	current_scene.enter()
+
   end
 end
 
@@ -27,7 +38,7 @@ end
 
 class LaserWeaponArmory < Scene
 
-  def eneter()
+  def enter()
   end
 
 end
@@ -41,14 +52,14 @@ end
 
 class EcapePod < Scene
 
-  def eneter()
+  def enter()
   end
 
 end
 
 class Map
 
-  def initilaize( start_scene)
+  def initialize( start_scene)
   end
 
   def next_scene( scene_name)
