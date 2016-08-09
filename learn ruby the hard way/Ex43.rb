@@ -173,6 +173,37 @@ end
 class EcapePod < Scene
 
   def enter()
+	puts "you rush through the ship desperately trying to makke it"
+	puts "the escape pod before the whole ship explodes. It seems like"
+	puts "hardly any gathons are on  the ship so your run is clear of"
+	puts "Interference. You get to the chamber withj escape pods and"
+	puts "onne you need to take one to take. Some of them could be damaged"
+	puts "but you dont have time to look. There's 5 pods which one"
+	puts "do you take?"
+
+	good_pod = rand(1..5)
+	print "[pod #]>"
+	guess = $stdin.gets.chomp.to_i
+
+	if guess != good_pod
+	  puts "You jump into pod %s and hit the eject button" % guess
+	  puts "The pod escapes out into the void space, then"
+	  puts "implodes as the hull ruptures, crushing your body"
+	  puts "into jam jelly"
+	  return 'death'
+
+	else 
+
+	  puts "You jump into pod %s and hit the eject button" % guess
+	  puts "The pod easily slides out into the space heading to"
+	  puts "the planet below. AS it flies to the planet, you look"
+	  puts "back and see you ship implode then explode like a "
+	  puts "bright star, talking out of the gathon ship at the same time"
+	  puts "You won!"
+	  
+	  return 'finished'
+	end
+
   end
 
 end
