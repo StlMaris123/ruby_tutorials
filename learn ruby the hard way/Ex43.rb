@@ -25,7 +25,16 @@ end
 
 class Death < Scene
 
+  @@quips= [
+	"You died.You kinda suck at this.",
+	"Your mum would be proud ... if she were smarter.",
+    "Such a loser",
+	"I have a smaller puppy that's better at this."
+  ]
+
   def enter()
+	puts @@quips[rand(0..(@@quips.length - 1))]
+	exit(1)
   end
 end
 
