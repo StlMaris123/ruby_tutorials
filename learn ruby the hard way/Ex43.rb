@@ -93,6 +93,39 @@ end
 class LaserWeaponArmory < Scene
 
   def enter()
+	puts "You do dive roll into the weapon Armory, crouch and scan the room"
+	puts "for more Gthons that might be hiding. Its dead quiet, too quiet"
+	puts "You stand up and run to the far side of the room nd find the"
+	puts "neutron bomb in its container. There is a key on the box"
+	puts "and you need the code to get the bomb out. If you get the code"
+	puts " wrong 10 times then the lock closes forever and you can't"
+	puts "get the bomb. The coode is 3 digits"
+	code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)} "
+	print "[keypad]>"
+	guess = $stdin.gets.chomp
+	guess = 0
+
+	while guess != code && guesses < 10
+	  puts "BZZZZZZZEEEED"
+	  guesses += 1
+	  print "[keypad]>"
+	  guess = $stdin.gets.chomp
+	end
+
+	if guess == code
+	  puts "The container clicks open and seal breaks letting gas out"
+	  puts "You grab the neutron bomb and run as fast as you can to the"
+	  puts "bridge whwre you msut place it in the right spot"
+	  return 'the_bride'
+
+	else
+	  puts "The lock buzzes one last time and then you hear a sickening"
+	  puts "mwltinf sound a sthe mechanism is fused togethr"
+	  puts "you decide to sit there and finally the gathons blow up the"
+	  puts"ship from their ship and tou die"
+	  return 'death'
+	end
+
   end
 
 end
