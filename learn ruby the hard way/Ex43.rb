@@ -133,6 +133,39 @@ end
 class TheBridge < Scene
 
   def enter()
+	puts "You burst onto the brdge with the neutron destruct bomb"
+	puts "Under your arm and surprise 5 Gathons who rae trying to "
+	puts " take control of the ship. Each of them ahas an even uglier"
+	puts "cloown costume than the last. They havent pilled out ther"
+	puts "weapons out yet, as they see the active bomb under your"
+	puts "arm and dont want to set it off"
+	print ">"
+
+	action = $stdin.gets.chomp
+	if action == "throw the bomb"
+	  puts "In apanic you throw the bomb at the gathons"
+	  puts "and make a leap for the door. Right as you drop it a "
+	  puts " Gathon shoots you right in the back killing"
+	  puts " As you die you see another Gathon franctically try to disarm"
+	  puts "the bomb. You die knowing they will probably blow up when"
+	  puts "it goes off"
+	  return 'death'
+
+	elsif action == "slowly place the bomb"
+	  puts "You point your blaster at the bomb under yoyr arm"
+	  puts "and the gathon s put their arns up and they start to sweat"
+	  puts "You inch backward to the door, open it, and then carefully"
+	  puts " place the bomb on the floor pointing your blaster on it"
+	  puts "and then you jump up thhrough the door, punch the close button"
+	  puts "and blast the lock so the gathons cant get out"
+	  puts "Now the bomb is places you run to the escape pod to"
+	  puts "get off this tin can"
+	  return 'escape_pod'
+	else
+	  puts "DOES NOT COMPUTE"
+	  return "the_bridge"
+	end
+
   end
 
 end
