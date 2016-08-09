@@ -170,7 +170,7 @@ class TheBridge < Scene
 
 end
 
-class EcapePod < Scene
+class EscapePod < Scene
 
   def enter()
 	puts "you rush through the ship desperately trying to makke it"
@@ -217,7 +217,7 @@ class Map
 	'central_corridor' => CentralCorridor.new(),
 	'laser_weapon_armory' => LaserWeaponArmory.new(),
 	'the_bridge' => TheBridge.new(),
-	'escape_pd' => EscapePod.new(),
+	'escape_pod' => EscapePod.new(),
 	'death' => Death.new(),
 	'finished' => Finished.new(),
   }
@@ -227,7 +227,7 @@ class Map
   end
 
   def next_scene( scene_name)
-	val = @@scenes[scene_scene]
+	val = @@scenes[scene_name]
 	return val
   end
 
