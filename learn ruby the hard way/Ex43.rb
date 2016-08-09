@@ -41,6 +41,51 @@ end
 class CentralCorridor < Scene
 
   def enter()
+	puts "The Gathons of planet Percel #25 have invaded youu ship and destroyed it"
+	puts " Your entire crew. You are the last surving member"
+	puts " Mission is to get the neutron destruct bomb from thee weopons"
+	puts " Put it on the bridge. and blow the ship up "
+	puts "Escape pod"
+	puts "\n"
+	puts " You are running down the central corridor to the weopons Armory"
+	puts " A gathon jumps out, red scaly skin, dark grimy teeth and evil claws"
+	puts " Flowing around his hate filled body. He is blocking the body"
+	puts "Armory and about to pull a weapon to blast you."
+	print ">"
+
+	action = $stdin.gets.chomp
+	if action == 'shoot!'
+	  puts "Quick on the draw you yank out your blaster and fire it"
+	  puts "His clown sostume is flowing and moving around his body"
+	  puts "Off your aim. Your laser hits his costume but misses him entirely"
+	  puts "Completely ruins his brand new costume his mother bought him"
+	  puts "Makes him fly into an insane rage and blast you repeatedly"
+	  puts "You are dead. Then he eats you"
+	  return 'death'
+
+	elsif action == "dodge!"
+	  puts " Like a world class boxer you dodge, weave, slip and slide right"
+	  puts "as the Gathons blaster cranks a laser past your head"
+	  puts "in the middle of your artful dodge your foot slips and you"
+	  puts " bang you head on themetal wall and pass out"
+	  puts "You wake up shortly after only to die as the gathon stomps on you"
+	  puts "You are dead. Then he eats you"
+	  return 'death'
+
+	elsif action == "tell a joke!"
+	  puts "Lucky you coz  they mad tou learn Gothon insults in the academy"
+	  puts "You tell the Gathon the one joke you know"
+	  puts "Lbhe xzxc edj.wfjkf.ckaf."
+	  puts "The Gathon tries not to laugh then bursts out laughing"
+	  puts "While laughing you run up and shoot him square in the head"
+	  puts "Putting him doown, then jump through the weapon Armory door"
+	  return 'Laser_weapon_armory'
+
+	else 
+	  puts "DOES NOT COMPUTE!"
+	  return 'central_corridor'
+	end
+
   end
 
 end
