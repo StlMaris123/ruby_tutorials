@@ -1,7 +1,7 @@
 require "gothonweb/map.rb"
 require "test/unit"
 
-class TestGame < Test::Unit::TestCase
+class TestMap < Test::Unit::TestCase
 
   def test_room()
     gold = Room.new("GoldRoom",
@@ -34,5 +34,32 @@ class TestGame < Test::Unit::TestCase
     assert_equal(west, start.go('west'))
     assert_equal(start, start.go('west').go('east'))
     assert_equal(start, start.go('down').go('up'))
+  end
+
+  def test_gothon_game_map()
+    assert_equal(Map::GENERIC_DEATH, Map::START.go('shoot!'))
+    assert_equal(Map::GENERIC_DEATH, Map::START.go('dodge!'))
+
+    room = Map::START.go('tell a joke')
+    assert_equal(Map::LASER_WEAPON_ARMORY, room)
+
+    # complete this test by making it play the game
+  end
+
+  def test_session_loading()
+    session = {}
+
+    room = Map::load_room(session)
+    assert_equal(room, nil)
+
+    Map::save_room(session, Map::START)
+    room = Map::load_room(session)
+    assert_equal(room, Map::START)
+
+    room = room.go('tell a joke')
+    assert_equal(room, Map::LASER_WEAPON_ARMORY)
+
+    Map::save_room(session, room)
+    assert_equal(room, Map::LASER_WEAPON_ARMORY)
   end
 end
