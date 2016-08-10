@@ -123,6 +123,28 @@ module Map
       @paths = {}
     end
 
+    ROOM_NAMES = {
+      'CENTRAL_CORRIDOR' => CENTRAL_CORRIDOR,
+      'LASER_WEAPON_ARMORY' => LASER_WEAPON_ARMORY,
+      'THE_BRIDGE' => THE_BRIDGE,
+      'ESCAPE_POD' => ESCAPE_POD,
+      'THE_END_WINNER' => THE_END_WINNER,
+      'THE_END_LOSER' => THE_END_LOSER,
+      'START' => START,
+
+    }
+
+    def Map::load_room(session)
+      # Given a session this will return the right room or nil
+      return ROOM_NAMES[session[:room]]
+    end
+
+    def Map::save_room(session, room)
+      # Store the room in the session for later, using its name
+      session[:room] = ROOM_NAMES.key(room)
+    end
+
+  end
     # these make it easy for you to access the variables
     attr_reader :name
     attr_reader :paths
