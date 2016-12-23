@@ -25,3 +25,6 @@ puts "#{word_count} words"
 sentence_count = text.split(/\.|\?|!/).length
 puts "#{sentence_count} sentences"
 
+paragraph_count = text.split(/\n\n/).length
+puts "#{paragraph_count} paragraphs"
+
