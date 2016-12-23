@@ -22,3 +22,6 @@ puts "#{total_characters_nospaces} characters excluding spaces"
 word_count = text.split.length
 puts "#{word_count} words"
 
+sentence_count = text.split(/\.|\?|!/).length
+puts "#{sentence_count} sentences"
+
