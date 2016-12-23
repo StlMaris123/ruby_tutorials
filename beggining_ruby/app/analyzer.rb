@@ -31,3 +31,9 @@ puts "#{paragraph_count} paragraphs"
 puts "#{sentence_count / paragraph_count} sentences per paragraph (average)"
 puts "#{word_count / sentence_count} words per sentence (average)"
 
+stopwords = %w{the a by on for of are with just but and to the my I has some in}
+all_words = text.scan(/\w+/)
+good_words = all_words.reject { |word| stopwords.include?(word) }
+good_percentage = ((good_words.length.to_f / all_words.length.to_f) * 100).to_i
+puts "#{good_percentage}% of words are non-fluff words"
+
