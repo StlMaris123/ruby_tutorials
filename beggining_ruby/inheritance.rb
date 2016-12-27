@@ -16,3 +16,4 @@ end
 
 my_object = ChildClass.new
 my_object.method1
+my_object.method2
