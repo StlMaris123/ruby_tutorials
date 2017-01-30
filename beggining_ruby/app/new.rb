@@ -10,3 +10,7 @@ while a = f.getc
 end
 
 puts File.mtime("text.txt")
+
+puts "It exists!" if File.exist?("text.txt")
+
+puts File.size("text.txt")
