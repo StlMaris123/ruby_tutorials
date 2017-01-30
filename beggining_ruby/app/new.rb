@@ -14,3 +14,8 @@ puts File.mtime("text.txt")
 puts "It exists!" if File.exist?("text.txt")
 
 puts File.size("text.txt")
+
+f = File.open("text.txt", "r")
+while !f.eof?
+  puts f.gets
+end
