@@ -19,3 +19,5 @@ f = File.open("text.txt", "r")
 while !f.eof?
   puts f.gets
 end
+
+puts Dir.pwd
